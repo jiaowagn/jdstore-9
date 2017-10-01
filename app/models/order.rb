@@ -23,7 +23,7 @@ class Order < ApplicationRecord
     end
 
     event :deliver do
-      transitions from: :shipping, to: :sipped
+      transitions from: :shipping, to: :shipped
     end
 
     event :return_good do
