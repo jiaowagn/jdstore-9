@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :carts do
     collection do
       delete :clean
-      post :checkout 
+      post :checkout
     end
   end
 
@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :products
   end
+
+  resources :orders 
 
   root 'products#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
